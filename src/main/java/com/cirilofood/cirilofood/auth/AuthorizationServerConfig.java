@@ -46,6 +46,11 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
                     .authorizedGrantTypes("client_credentials")
                     .scopes("write", "read")
                 .and()
+                    .withClient("cirilofood-webadmin")
+                    .authorizedGrantTypes("implicit")
+                    .scopes("write", "read")
+                    .redirectUris("http://client-app")
+                .and()
                     .withClient("checktoken")
                     .secret(passwordEncoder.encode("check123"));
     }

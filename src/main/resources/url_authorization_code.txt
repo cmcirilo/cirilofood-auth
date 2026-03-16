@@ -1,1 +1,0 @@
-http://auth.cirilofood.local:8081/oauth/authorize?response_type=code&client_id=cirilo-analytics&state=abc&redirect_uri=http://client-app

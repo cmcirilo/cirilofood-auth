@@ -1,0 +1,1 @@
+http://auth.cirilofood.local:8081/oauth/authorize?response_type=token&client_id=cirilofood-webadmin&state=abc&redirect_uri=http://client-app
