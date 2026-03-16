@@ -38,7 +38,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
                     .withClient("cirilo-analytics")
                         .secret(passwordEncoder.encode("analytics123"))
                     .authorizedGrantTypes("authorization_code")
-                    .redirectUris("http://client-app")
+                    .redirectUris("http://www.ciriloanalytics.local:8082")
                     .scopes("write", "read")
                 .and()
                     .withClient("cirilologistic-other-backend")
