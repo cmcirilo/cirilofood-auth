@@ -35,6 +35,12 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
                     .accessTokenValiditySeconds(6 * 60 * 60) //6 hours
                     .refreshTokenValiditySeconds(60 * 24 * 60 * 60) //60 days
                 .and()
+                    .withClient("cirilo-analytics")
+                        .secret(passwordEncoder.encode("analytics123"))
+                    .authorizedGrantTypes("authorization_code")
+                    .redirectUris("http://client-app")
+                    .scopes("write", "read")
+                .and()
                     .withClient("cirilologistic-other-backend")
                     .secret(passwordEncoder.encode("backend123"))
                     .authorizedGrantTypes("client_credentials")
