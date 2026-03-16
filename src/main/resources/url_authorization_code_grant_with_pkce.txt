@@ -1,0 +1,4 @@
+Code Verifier: teste123
+Code Challenge: teste123
+
+http://auth.cirilofood.local:8081/oauth/authorize?response_type=code&client_id=cirilo-analytics&redirect_uri=http://www.ciriloanalytics.local:8082&code_challenge=teste123&code_challenge_method=plain

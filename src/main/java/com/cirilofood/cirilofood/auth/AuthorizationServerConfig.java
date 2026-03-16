@@ -40,7 +40,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
                     .refreshTokenValiditySeconds(60 * 24 * 60 * 60) //60 days
                 .and()
                     .withClient("cirilo-analytics")
-                        .secret(passwordEncoder.encode("analytics123"))
+                        .secret(passwordEncoder.encode(""))
                     .authorizedGrantTypes("authorization_code")
                     .redirectUris("http://www.ciriloanalytics.local:8082")
                     .scopes("write", "read")
@@ -70,7 +70,8 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 
     @Override
     public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
-        security.checkTokenAccess("isAuthenticated()");
+        security.checkTokenAccess("isAuthenticated()")
+                .allowFormAuthenticationForClients();
     }
 
     private TokenGranter tokenGranter(AuthorizationServerEndpointsConfigurer endpoints) {
