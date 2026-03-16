@@ -58,7 +58,7 @@ function newAccessToken(code) {
     },
 
     error: function(error) {
-      alert("erro new access key");
+      alert("erro new access token");
     }
   });
 }
