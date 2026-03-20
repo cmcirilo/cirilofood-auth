@@ -1,4 +1,4 @@
-package com.cirilofood.cirilofood.auth;
+package com.cirilofood.cirilofood.auth.core;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;

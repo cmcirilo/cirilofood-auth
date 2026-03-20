@@ -1,4 +1,4 @@
-package com.cirilofood.cirilofood.auth;
+package com.cirilofood.cirilofood.auth.core;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
