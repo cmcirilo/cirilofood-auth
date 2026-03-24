@@ -2,7 +2,9 @@ package com.cirilofood.cirilofood.auth.core;
 
 import com.cirilofood.cirilofood.auth.domain.User;
 import lombok.Getter;
+import org.springframework.security.core.GrantedAuthority;
 
+import java.util.Collection;
 import java.util.Collections;
 
 @Getter
@@ -13,8 +15,8 @@ public class AuthUser extends org.springframework.security.core.userdetails.User
     private Long userId;
     private String fullName;
 
-    public AuthUser(User user){
-        super(user.getEmail(), user.getPassword(), Collections.emptyList());
+    public AuthUser(User user, Collection<? extends GrantedAuthority> authorities){
+        super(user.getEmail(), user.getPassword(), authorities);
 
         this.userId = user.getId();
         this.fullName = user.getName();
