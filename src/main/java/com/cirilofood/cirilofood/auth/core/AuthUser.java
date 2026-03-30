@@ -5,7 +5,6 @@ import lombok.Getter;
 import org.springframework.security.core.GrantedAuthority;
 
 import java.util.Collection;
-import java.util.Collections;
 
 @Getter
 public class AuthUser extends org.springframework.security.core.userdetails.User {
@@ -15,7 +14,7 @@ public class AuthUser extends org.springframework.security.core.userdetails.User
     private Long userId;
     private String fullName;
 
-    public AuthUser(User user, Collection<? extends GrantedAuthority> authorities){
+    public AuthUser(User user, Collection<? extends GrantedAuthority> authorities) {
         super(user.getEmail(), user.getPassword(), authorities);
 
         this.userId = user.getId();
