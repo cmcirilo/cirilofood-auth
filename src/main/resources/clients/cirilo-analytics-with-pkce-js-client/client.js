@@ -1,7 +1,7 @@
 const config = {
   clientId: "cirilo-analytics",
-  authorizeUrl: "http://auth.cirilofood.local:8081/oauth/authorize",
-  tokenUrl: "http://auth.cirilofood.local:8081/oauth/token",
+  authorizeUrl: "http://api.cirilofood.local:8080/oauth/authorize",
+  tokenUrl: "http://api.cirilofood.local:8080/oauth/token",
   callbackUrl: "http://www.ciriloanalytics.local:8082",
   cozinhasUrl: "http://api.cirilofood.local:8080/v1/cuisines"
 };
